@@ -1,0 +1,52 @@
+.LandingPageTopNav {
+  position: fixed;
+  z-index: 1000;
+    background-color: #101310;
+    padding: 10px 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .LandingPageTopNavText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .site-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #25d366;
+    cursor: pointer;
+
+  }
+  
+  
+  .LandingPageTopNavText ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .LandingPageTopNavText ul li {
+    margin: 0 25px;
+    font-size: 1.1rem;
+    color: #fff; 
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .LandingPageTopNavText ul li:hover {
+    color: #25d366; 
+    font-size: 1.05rem;
+  }
+  
+  
+  .LandingPageTopNavText ul li.contact {
+    font-weight: bold;
+  }
+  

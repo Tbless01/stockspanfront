@@ -1,0 +1,77 @@
+/* UpdateProduct.css */
+
+.space1 {
+    margin-top: 120px; /* Adjust as needed */
+  }
+  
+  .topmost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .edit-product-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .edit-product-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .edit-product-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bolder;
+  }
+  
+  .edit-product-container div {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .edit-product-container input,
+  .edit-product-container textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .edit-product-container textarea {
+    resize: vertical;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-group button {
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%; /* Adjust as needed */
+    font-size: 16px;
+  }
+  
+  .button-group button:hover {
+    background-color: #128c7e;
+  }
+  

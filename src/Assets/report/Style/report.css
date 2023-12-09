@@ -1,0 +1,42 @@
+.report-problem-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    background-image: url("../../../Assets/_HoodMouse_-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ff0090;
+    margin-bottom: 1.5rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #ff0090;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff0066;
+  }
+  

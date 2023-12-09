@@ -1,0 +1,149 @@
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.mytext {
+  color: #885050;
+  font-size: 14px;
+}
+
+.product-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 600px;
+  overflow: auto;
+  overflow-y: auto;  /* Use overflow-y to control vertical overflow */
+  padding: 10px;     /* Add padding for better aesthetics */
+  max-height: 400px; /* max-height worked for me, the products stopped hiding under topnav */
+  /* overflow: hidden; */
+}
+
+/* Assuming each product item has a class .product-item */
+.product-item {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed, considering padding */
+  margin: 10px; /* Add margin for spacing between product items */
+}
+
+.topmost { 
+  overflow: auto;
+  /* display: flex; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* height: 100%; */
+  /* margin-bottom: 20px; */
+}
+
+.product-item {
+  background-color: #f7f7f7; 
+  border: 1px solid #da1b1b;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(219, 16, 16, 0.1);
+  transition: transform 0.3s ease-in-out; 
+}
+
+.product-item:hover {
+  transform: scale(1.02); 
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+}
+
+
+.product-item {
+  position: relative; 
+}
+
+.last-image {
+  position: absolute;
+  max-width: 40%;
+  max-height: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  top: 0; /* Position from the top within the .product-item */
+  right: 0; /* Position from the right within the .product-item */
+}
+
+.edit-button,
+.delete-button {
+  background-color: #25d366;
+  color: #fff;
+  padding: 8px;
+  max-width: 45%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 4%;
+  margin-top: 1px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #128c7e;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Higher z-index to ensure it's above other elements */
+}
+
+.modal-content {
+  transition: z-index 0.3s ease-in-out; 
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.ProductName{
+  color: #77fab0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.image-gallery img {
+  max-width: 100px; /* Reduced max-width */
+  max-height: 100px; /* Reduced max-height */
+  margin: 5px; /* Added some margin between images */
+  cursor: pointer;
+  border-radius: 5px; /* Added border-radius for a rounded appearance */
+  transition: transform 0.3s ease-in-out, z-index 0s linear 0.3s;
+}
+
+.image-gallery img:hover {
+  transform: scale(3.2) ;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+
+}

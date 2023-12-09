@@ -1,0 +1,62 @@
+/* Authentication.css */
+
+/* Authentication Main Container styling */
+.AuthenticationMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(248, 244, 244, 0.842); 
+  background-color: #fff; 
+  border-radius: 10px; 
+  max-width: 400px;
+  margin-top: 10%;
+  margin-left: 35%
+}
+
+
+.AuthenticationSemiMain {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; 
+  border-radius: 10px;
+  color: #333; 
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(247, 245, 245, 0.473); 
+
+}
+.AuthenticationEmail {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  outline: none;
+  margin-left: -3%;
+}
+
+/* Verify button styling */
+.AuthenticationEmail1 {
+  background-color: #25d366; /* WhatsApp's green color */
+  color: #fff; /* White text color */
+  padding: 3px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 800;
+}
+.AuthenticationEmail1:hover{
+  background-color: #15a74a;
+}
+
+/* Countdown timer styling */
+.CountdownTimer {
+  font-size: 1rem;
+  color: #555; /* Dark gray text color for the timer */
+  margin-top: 10px;
+}

@@ -1,0 +1,86 @@
+.RegisterSemiMain {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  color: #333;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(247, 245, 245, 0.473);
+}
+
+.Real {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+select[name="genderType"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.RealContinue {
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 900;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.RealContinue:hover {
+  background-color: #179c48;
+}
+
+.RealT {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Toastify__toast-container {
+  top: 0;
+  right: 0;
+  width: 300px;
+}
+
+/* Loading Spinner Styles */
+.LoaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Adjust as needed */
+}
+
+.Loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+ 

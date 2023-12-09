@@ -1,0 +1,46 @@
+/* login.css */
+
+.LoginMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 23, 23);
+  width: 100%;
+margin-left: -45%;
+  padding: 44%;
+}
+
+.LoginSemiMain {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: rgb(51, 48, 48);
+}
+
+.LoginEmail {
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+.LoginEmail1 {
+  background-color: #25d366;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.LoginEmail1:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

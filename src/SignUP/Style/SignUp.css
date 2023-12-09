@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* White background */
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ece7e7; /* Black text */
+}
+.password-mismatch{
+  font-size: small;
+  color: red;
+}
+
+/* Site Name styling */
+.site-name {
+  font-size: 2.5rem;
+  color: #25d366; /* WhatsApp's green color */
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.SignUPMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the content vertically and horizontally */
+  margin-top: 5%;
+  margin-left: 36%;
+  padding: 20px; /* Add spacing around the container */
+  box-shadow: 0 5px 15px rgba(248, 244, 244, 0.842); /* Add shadow to the main container */
+  background-color: #fff; /* White background */
+  border-radius: 10px; /* Apply border radius to the container */
+  max-width: 400px; /* Limit the width of the container */
+}
+
+/* Semi Main Container styling */
+.SignUPSemiMainContainer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 10px;
+  color: #333; /* Dark text color */
+  width: 100%;
+  max-width: 400px; 
+  box-shadow: 0 5px 15px rgba(247, 245, 245, 0.473); 
+}
+.ErrorMessage{
+  font-size: small;
+  color: red;
+}
+.SignUpEmail {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc; 
+  outline: none;
+  margin-left: -3%;
+}
+
+.SignUpEmail1 {
+  background-color: #25d366; 
+  color: #fff; 
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 900;
+}
+.SignUpEmail1:hover{
+  font-size: 89%;
+  background-color: #1ab653; 
+}
+form{
+  padding-bottom: 7%;
+}
+
+/* Login option styling */
+.SignUpLoginOption {
+  cursor: pointer;
+  color: #0073e6; /* Blue color for the login option */
+  text-decoration: underline;
+  margin: 10px 0;
+}
+
+
+/* Toast container styling */
+.Toastify__toast-container {
+  top: 0;
+  right: 0;
+  width: 300px; /* Adjust as needed */
+}
