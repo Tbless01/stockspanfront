@@ -5,7 +5,9 @@
   font-size: 24px;
   color: #333;
 }
-
+.space{
+  margin-top: 5%;
+}
 .mytext {
   color: #885050;
   font-size: 14px;
@@ -19,7 +21,7 @@
   overflow: auto;
   overflow-y: auto;  /* Use overflow-y to control vertical overflow */
   padding: 10px;     /* Add padding for better aesthetics */
-  max-height: 400px; /* max-height worked for me, the products stopped hiding under topnav */
+  max-height: 450px; /* max-height worked for me, the products stopped hiding under topnav */
   /* overflow: hidden; */
 }
 
@@ -147,3 +149,11 @@
   z-index: 2;
 
 }
+.prevNext{
+  display: flex;
+  margin-left: 15%;
+  }
+  #prevNe{
+   max-width: 10%;
+    margin-right: 70%;
+  }

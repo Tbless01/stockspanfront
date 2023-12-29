@@ -44,6 +44,7 @@ export const Dashboard = () => {
 
   const confirmLogout = () => {
     localStorage.removeItem("jwtToken");
+    localStorage.removeItem("emailAddress")
     window.location.href = "/";
   };
 

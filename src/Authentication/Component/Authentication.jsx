@@ -8,8 +8,8 @@ import TopNav from "../../TopNav/Component/TopNav";
 export const Authentication = () => {
   const [otp, setOtp] = useState("");
   const [countdown, setCountdown] = useState(() => {
-    // Retrieve countdown value from localStorage or set default (900 seconds)
-    const storedCountdown = localStorage.getItem("countdown");
+    // Retrieve countdown value from sessionStorage or set default (900 seconds)
+    const storedCountdown = sessionStorage.getItem("countdown");
     return storedCountdown ? parseInt(storedCountdown, 10) : 900;
   });
   const [timer, setTimer] = useState(null);
@@ -21,8 +21,8 @@ export const Authentication = () => {
         setInterval(() => {
           setCountdown((prevCountdown) => {
             const newCountdown = prevCountdown - 1;
-            // Save countdown value to localStorage
-            localStorage.setItem("countdown", newCountdown.toString());
+            // Save countdown value to sessionStorage
+            sessionStorage.setItem("countdown", newCountdown.toString());
             return newCountdown;
           });
         }, 1000)
