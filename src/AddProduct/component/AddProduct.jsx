@@ -5,6 +5,18 @@ import { toast, ToastContainer } from "react-toastify";
 import '../../Authentication/Style/Authentication.css';
 import '../style/AddProduct.css';
 import SiteNameDashboard from "../../SiteNameDashboard/Component/SiteNameDashboard.jsx";
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 export const AddProduct = () => {
   const [name, setName] = useState('');
@@ -66,7 +78,7 @@ export const AddProduct = () => {
     }
   };
 
-  const isDisabled = name && price && stock;
+  const isDisabled = !(name && price && stock);
   // if(!isDisabled) toast.success('Please fill all required fields', {
   //   autoClose: 3000, 
   // });
@@ -74,8 +86,82 @@ export const AddProduct = () => {
   return (
     <>
     <SiteNameDashboard></SiteNameDashboard>
+
     <div className='complete'>
       <h2 className="add-product-title">Add Product</h2>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div>
+        <TextField
+          label="Product Name"
+          id="outlined-start-adornment"
+          fullWidth
+          sx={{ m: 1, width: '50ch' }}
+          name="name"
+          value={name}
+          onChange={handleChange}
+          InputProps={{
+            startAdornment: <InputAdornment position="start"></InputAdornment>,
+          }}
+        />
+
+        <TextField
+          label="Desription"
+          id="outlined-start-adornment"
+          fullWidth
+          sx={{ m: 1 , width: '50ch' }}
+          name="description"
+          value={description}
+          onChange={handleChange}
+          InputProps={{
+            startAdornment: <InputAdornment position="start"></InputAdornment>,
+          }}
+        />
+        <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '50ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+
+        <TextField
+          id="outlined-number"
+          label="Amount"
+          type="number"
+          name="price"
+          value={price}
+          startAdornment={<InputAdornment position="start">₦</InputAdornment>}
+          onChange={handleChange}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+              <TextField
+          id="outlined-number"
+          label="Stock"
+          type="number"
+          name="stock"
+          value={stock}
+          onChange={handleChange}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+    </Box>
+      </div>
+    </Box>
+    <Stack
+        spacing={2}
+        direction="row"
+        sx={{ marginLeft: '38%', width: '25ch' }}
+        className='Submit'
+        onClick={handleSubmit}
+      >
+      <Button variant="outlined" disabled={isDisabled}>Submit</Button>
+    </Stack>
+
+{/* 
       <form>
         <div className="form-group">
           <label htmlFor="name" className="label">Product Name:</label>
@@ -88,6 +174,7 @@ export const AddProduct = () => {
             className="input"
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="price" className="label">Price:</label>
           <input
@@ -122,7 +209,7 @@ export const AddProduct = () => {
           />
         </div>
         <button type="button" className="submit-button" onClick={handleSubmit} disabled={!isDisabled}>Add Product</button>
-      </form>
+      </form> */}
       <ToastContainer />
     </div>
     </>

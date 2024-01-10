@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import {AboutUs} from "./Pages/AboutUs/Component/AboutUs";
 import { LandingPage } from './LandingPage/Component/LandingPage';
 import { Login } from './LogIn/Component/login';
+import { ContactUs } from './ContactUs/Component/ContactUs';
 import { SignuP } from './SignUP/Component/Signup';
 import { Authentication } from './Authentication/Component/Authentication';
 import { AddProduct } from './AddProduct/component/AddProduct.jsx';
@@ -13,7 +14,8 @@ import { Register } from './RealRegister/Component/Register';
 import { UpdateProduct } from './UpdateProduct/Component/UpdateProduct.jsx';
 import { UserCardPage } from './UserCardPage/Component/UserCardPage';
 import { MakePaymentPage } from './MakePaymentPage/Component/MakePaymentPage.jsx';
-// import { ParentBookingHistory } from './Pages/ParentBookingHistory/Component/ParentBooking';
+// import { UpdateProfile } from './Pages/UpdateProfile/Component/ParentBooking';
+import { UpdateProfile } from './Profile/Component/UpdateProfile.jsx';
 import {ProductsAvailableForOrderExceptOwners} from './AllAvailableProduct/Component/ProductsAvailableForOrderExceptOwners.jsx';
 import {PlaceOrderPage} from './PlaceOrder/Component/PlaceOrderPage.jsx';
 import { Dashboard } from './DashBoard/component/Dashboard.jsx';
@@ -26,9 +28,10 @@ function App() {
         <Router>
           <Routes>
           <Route path="/Dashboard" element={< Dashboard />} />
+          <Route path="/ContactUs" element={< ContactUs />} />
             <Route  path="/ImagePage" element={<ImagePage/>}/>
             <Route path="/ReviewOrderPage" element={< ReviewOrderPage />} />
-          {/* <Route path="/ParentBookingHistory" element={< ParentBookingHistory />} /> */}
+          <Route path="/UpdateProfile" element={< UpdateProfile />} />
           {/* <Route  path="/report" element={<Report/>}/> */}
           <Route path="/MakePaymentPage" element={< MakePaymentPage />} />
           <Route path="/UserCardPage" element={<UserCardPage />} />

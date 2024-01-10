@@ -1,4 +1,4 @@
-body {
+  body {
   margin: 0;
   padding: 0;
   background-color: #fff; /* White background */
@@ -10,11 +10,15 @@ body {
   justify-content: center;
   color: #ece7e7; /* Black text */
 }
+
 .password-mismatch{
   font-size: small;
   color: red;
 }
-
+.upshift{
+  margin-top: -5%;
+  justify-content: center;
+}
 /* Site Name styling */
 .site-name {
   font-size: 2.5rem;
@@ -23,23 +27,28 @@ body {
   font-family: 'Pacifico', cursive;
   text-align: center;
 }
-
-.SignUPMainContainer {
-  display: flex;
+.SignUPMainContainer{
+margin-top: 40%;
+max-height: 100%;
+}
+.SignUPSemiMainContainer {
+  margin-top: 50%;
+  
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center the content vertically and horizontally */
-  margin-top: 5%;
+  justify-content: center; 
   margin-left: 36%;
-  padding: 20px; /* Add spacing around the container */
-  box-shadow: 0 5px 15px rgba(248, 244, 244, 0.842); /* Add shadow to the main container */
-  background-color: #fff; /* White background */
-  border-radius: 10px; /* Apply border radius to the container */
-  max-width: 400px; /* Limit the width of the container */
+  padding: 20px; 
+  box-shadow: 0 5px 15px rgba(248, 244, 244, 0.842);
+  background-color: #fff; 
+  border-radius: 10px; 
+  max-width: 400px; 
+  margin-top: 1%; */
 }
 
-/* Semi Main Container styling */
 .SignUPSemiMainContainer {
+  margin-top: -10%;
   text-align: center;
   padding: 20px;
   background-color: #f0f0f0; /* Light gray background */
@@ -47,7 +56,7 @@ body {
   color: #333; /* Dark text color */
   width: 100%;
   max-width: 400px; 
-  box-shadow: 0 5px 15px rgba(247, 245, 245, 0.473); 
+  box-shadow: 0 5px 15px rgb(255, 255, 255); 
 }
 .ErrorMessage{
   font-size: small;

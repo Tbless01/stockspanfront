@@ -28,14 +28,19 @@
 .Dashboard {
   display: flex;
   height: 100vh;
-  background-image: url("../../Assets/image_standing.jpg");
+  background-image: url("https://th.bing.com/th/id/OIP.dainnTV2m0vfpo0tGLBK8AHaER?pid=ImgDet&w=207&h=119&c=7");
   background-size: cover;
   background-position: center;
   width: 100vw; 
   margin: 0;
   overflow: hidden;
-  margin-top: 12%;
 }
+
+.savor{
+  margin-top: 1%;
+}
+
+
 .boardInner1{
   
   width: 25%;
@@ -174,13 +179,14 @@ font-size: 80%;
   margin-top: -2%;
 }
 .hellothere{
+  margin-top: 2.5%;
   margin-right: 85%;
   margin-left: -4%;
 }
 .hi{
   font-weight: 1000;
   float: left;
-  color: #7af0a7;
+  color: #aecff0;
 }
 .boarder1{
   margin-top: 5.5%;
@@ -191,6 +197,25 @@ font-size: 80%;
 }
 .spanname{
   font-size: 35px;
-  color: #ff3d00;
+  color: #79afe6;
   font-weight: 800;
+  text-shadow:  2 2 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.welcome-text {
+  color: #6da9e6;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  /* border-right: 0.15em solid #569ce2; */
+  animation: typing 7s steps(40) infinite;
+  width: 0; 
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
 }

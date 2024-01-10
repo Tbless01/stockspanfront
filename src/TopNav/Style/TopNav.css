@@ -1,13 +1,17 @@
-.LandingPageTopNav {
+
+.LandingTopNav{
   position: fixed;
   z-index: 1000;
-    background-color: #101310;
-    padding: 10px 0;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
+  background-color: #f5f7f5;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.Landing{
+  display: flex;
+}
+  
   .LandingPageTopNavText {
     display: flex;
     justify-content: space-between;
@@ -17,13 +21,6 @@
     padding: 0 20px;
   }
 
-  .site-name {
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-    color: #25d366;
-    cursor: pointer;
-
-  }
   
   
   .LandingPageTopNavText ul {
@@ -32,19 +29,18 @@
     display: flex;
   }
   
-  .LandingPageTopNavText ul li {
-    margin: 0 25px;
+  .Landing {
+    /* margin: 0 25px; */
     font-size: 1.1rem;
-    color: #fff; 
+    color: #1565C0; 
     cursor: pointer;
     transition: color 0.3s;
   }
   
   .LandingPageTopNavText ul li:hover {
-    color: #25d366; 
+    color: #1565C0; 
     font-size: 1.05rem;
   }
-  
   
   .LandingPageTopNavText ul li.contact {
     font-weight: bold;

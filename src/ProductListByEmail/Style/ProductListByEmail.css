@@ -1,4 +1,26 @@
+.cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+}
+.search{
+  max-width:70%;
+  margin-left: 15%;
+  display: flex;
+  /* position: fixed; */
+}
 
+.buttonSpace{
+  width: 100%;
+  display: flex;
+}
+.buttonSp{
+ margin-right: 40%;
+}
+.buttonSp2{
+  margin-left: 40%;
+}
 .header {
   text-align: center;
   margin-bottom: 20px;
@@ -8,11 +30,17 @@
 .space{
   margin-top: 5%;
 }
+
 .mytext {
   color: #885050;
   font-size: 14px;
 }
-
+.empty-list-message{
+  color: #128c7e;
+}
+.prodName{
+  color: #73b8b0;
+}
 .product-list-container {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +51,9 @@
   padding: 10px;     /* Add padding for better aesthetics */
   max-height: 450px; /* max-height worked for me, the products stopped hiding under topnav */
   /* overflow: hidden; */
+}
+.productlist{
+  color: rgb(6, 4, 8);
 }
 
 /* Assuming each product item has a class .product-item */
@@ -37,12 +68,24 @@
   flex-direction: column;
   /* align-items: center; */
   /* height: 100%; */
-  /* margin-bottom: 20px; */
+  margin-top: 4%;
+}
+button{
+  background-color: blueviolet;
+}
+button:hover{
+  background-color: rgb(173, 98, 243);
+}
+.search{
+  display: flex;
+}
+.search-input{
+  width: 2000%;
 }
 
 .product-item {
   background-color: #f7f7f7; 
-  border: 1px solid #da1b1b;
+  border: 1px solid blueviolet;
   border-radius: 10px;
   padding: 15px;
   margin: 10px;

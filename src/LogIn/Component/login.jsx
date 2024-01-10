@@ -3,7 +3,11 @@ import axios from "../../../src/api/axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../LogIn/Style/login.css";
-import SiteName from "../../SiteName/Component/SiteName";
+import TopNav from "../../TopNav/Component/TopNav";
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import { Button } from "@mui/material";
 
 export const Login = () => {
   const [emailAddress, setEmailAddress] = useState("");
@@ -18,6 +22,7 @@ export const Login = () => {
       setPassword(e.target.value);
     }
   };
+  const isDisabled = !(emailAddress && password);
 
   const userLogin = async () => {
     setIsLoading(true);
@@ -45,11 +50,39 @@ export const Login = () => {
 
   return (
     <>
-      <SiteName />
+      <TopNav />
       <div className="LoginMainContainer">
         <div className="LoginSemiMain">
-          Enter Email Address
-          <input
+          <div className="signin"> Sign In</div><br></br>
+          <div className="welcomeback">Welcome Back! <br></br>Enter your login details to access your account</div>
+          <Box className="nextline"
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '50ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField
+        id="standard-basic"
+        label="Email"
+        variant="standard"
+        minLength={11}
+        name="emailAddress"
+        onChange={handleChange} />
+        
+      <TextField
+       id="standard-basic"
+       label="Password" 
+       variant="standard"
+       type="password"
+       className="LoginEmail"
+       name="password"
+       onChange={handleChange} />
+    </Box>
+
+
+          {/* <input
             type="email"
             id="emailInput"
             className="LoginEmail"
@@ -65,15 +98,22 @@ export const Login = () => {
             className="LoginEmail"
             name="password"
             onChange={handleChange}
-          />
-          <button
+          /> */}
+          
+ <Stack className="upshift" spacing={1} direction="row">
+          <Button
+          variant="outlined" 
             type="button"
-            className="LoginEmail1"
+            className="Login"
             onClick={userLogin}
-            disabled={isLoading}
+            disabled={isDisabled}
+            // disabled={isLoading}
           >
             {isLoading ? "Logging in..." : "Login"}
-          </button>
+          </Button>
+</Stack>
+        
+          <div className="noAccount">If you don't have an account <u onClick={() => window.location.href = '/SignUp'} className="regButton">Register</u></div>
         </div>
       </div>
       <ToastContainer />

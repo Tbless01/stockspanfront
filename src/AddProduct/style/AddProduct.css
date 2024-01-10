@@ -1,17 +1,20 @@
 /* AddProduct.css */
 
-.complete{
-  padding-top: 30%;
-}
 .add-product-title {
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
   color: #333;
 }
+.complete{
+  margin-top: -10%;
+}
 
 .form-group {
   margin-bottom: 20px;
+}
+.Submit{
+  margin-top: -5%;
 }
 
 .label {

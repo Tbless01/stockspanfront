@@ -1,13 +1,12 @@
 import React from "react";
 import "../Style/LandingPage.css";
 import TopNav from "../../TopNav/Component/TopNav";
-import './../../TopNav/Style/TopNav.css';
 import inventoryImage from "../../Assets/image_inventory_management.jpg";
 export const LandingPage = () => {
   return (
     <>
       <TopNav/>
-      <div className="LandingPage DarkBackground">
+      <div className="LandingPage">
         <div className="LandingPageMainContainer">
           <div className="BlueBox">
             <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet"></link>

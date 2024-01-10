@@ -3,6 +3,10 @@ import axios from "../../../src/api/axios";
 import "../../SignUP/Style/SignUp.css";
 import { ToastContainer, toast } from "react-toastify";
 import TopNav from "../../TopNav/Component/TopNav";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 export const SignuP = () => {
   const [registrationData, setRegistrationData] = useState({
@@ -10,14 +14,16 @@ export const SignuP = () => {
     firstName: "",
     lastName: "",
     password: "",
-    confirmPassword: "", // New field for confirming password
+    confirmPassword: "",
     phoneNumber: "",
-    genderType: "",
+    // genderType: "",
   });
 
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const [passwordMismatch, setPasswordMismatch] = useState(false);
   const [loading, setLoading] = useState(false);
+  const isDisabled = !(registrationData.emailAddress && registrationData.firstName && registrationData.lastName && registrationData.password && registrationData.confirmPassword && registrationData.phoneNumber);
+
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -88,12 +94,62 @@ export const SignuP = () => {
   return (
     <>
       <TopNav />
-      <div className="LandingPage DarkBackground">
+      <div className="LandingPage">
         <div className="SignUPMainContainer">
           <div className="SignUPSemiMainContainer">
             <p>Sign up to get started</p>
             {passwordMismatch && <div className="password-mismatch">Passwords do not match</div>}
-            <input
+            <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 0.8, width: '40ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField 
+      id="outlined-basic" 
+      label="Email" variant="outlined" 
+      minLength={11}
+      name="emailAddress"
+      onChange={handleInputChange}
+      required/>
+            <TextField 
+      id="outlined-basic" 
+      label="First Name" variant="outlined" 
+      name="firstName"
+      onChange={handleInputChange}
+      required/>
+            <TextField 
+      id="outlined-basic" 
+      label="Last Name" variant="outlined" 
+      name="lastName"
+      onChange={handleInputChange}
+      required/>
+            <TextField 
+      id="outlined-basic" 
+      label="Phone Number" variant="outlined" 
+      name="phoneNumber"
+      onChange={handleInputChange}
+      required/>
+            <TextField 
+      id="outlined-basic" 
+      label="Password" variant="outlined" 
+      type="password"
+      name="password"
+      onChange={handleInputChange}
+      required/>
+                  <TextField 
+      id="outlined-basic" 
+      label="Confirm Password" variant="outlined" 
+      type="password"
+      name="confirmPassword"
+      onChange={handleInputChange}
+      required/>
+      {/* <TextField id="filled-basic" label="Filled" variant="filled" />
+      <TextField id="standard-basic" label="Standard" variant="standard" /> */}
+    </Box>
+            {/* <input
               type="email"
               id="emailInput"
               className="SignUpEmail"
@@ -161,13 +217,20 @@ export const SignuP = () => {
               name="confirmPassword"
               onChange={handleInputChange}
               required
-            />
-            <form onSubmit={handleFormSubmit}>
+            /> */}
+ <Stack className="upshift" spacing={1} direction="row">
+  <form onSubmit={handleFormSubmit}>
+    <Button type="submit" variant="contained" disabled={isDisabled}>
+      {loading ? "Loading..." : "Register"}
+    </Button>
+  </form>
+</Stack>
+            {/* <form className="upshift" onSubmit={handleFormSubmit}>
               <button className="SignUpEmail1" type="submit" disabled={loading}>
                 {loading ? "Loading..." : "Continue"}
               </button>
-            </form>
-            <p>
+            </form> */}
+            <p className="upshift">
               {" "}
               Already have an account? Login <a href="/LogIn">here</a>
             </p>
